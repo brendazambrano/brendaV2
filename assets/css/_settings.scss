@@ -1,0 +1,50 @@
+/* tools */
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+
+$rem-base: 16 !default;
+@function rem-calc($pxWidth) {
+  @return $pxWidth / $rem-base * 1rem;
+}
+
+// font family (google fonts included in default.hbs header)
+$main-font: 'Open Sans', sans-serif;
+$headers-font: 'Montserrat', sans-serif;
+
+// theme prefix name
+$theme-prefix: 'summer';
+
+// post view width of an image and paragraphs (headers and etc. too)
+$post-image-max-width: rem-calc(900);
+$post-paragraph-max-width: rem-calc(700);
+
+// colors map
+$colors: (
+    main-dark: #000,
+    white: #ffffff,
+    main-contrast: #e51843
+);
+
+// color function
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}

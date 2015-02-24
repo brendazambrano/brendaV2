@@ -1,0 +1,36 @@
+<footer class="summer-site-footer {{#if @blog.cover}}with-bg-cover{{/if}}">
+    <div class="copyright">
+         <section> <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; 2015  </section>
+
+         <p> </p>
+         <section>Diseñado por <a href="http://devbranding.com" target="_blank">DevBranding</a></section>
+    </div>
+    <div class="social-icons">
+        {{! add your urls ; more icons : http://fontawesome.io/icons/ }}
+        {{! feed }}
+        <a href="http://eepurl.com/be7KiH" target="_blank">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-rss fa-stack-1x"></i>
+            </span>
+        </a>
+        {{! twitter }}
+        <a href="https://twitter.com/bren_zamb" target="_blank">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-twitter fa-stack-1x"></i>
+            </span>
+        </a>
+
+        
+        {{! facebook }}
+        <a href="https://www.facebook.com/brendazamb" target="_blank">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-facebook fa-stack-1x"></i>
+            </span>
+        </a>
+    </div>
+    {{! more icons : http://fontawesome.io/icons/ }}
+    <div class="cf"></div>
+</footer>

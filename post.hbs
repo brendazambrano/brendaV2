@@ -1,0 +1,163 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+    {{! post cover default effect - fadeout - without special tags in post }}
+    {{^has tag="simple, sliced, push"}}
+        <main id="summer-post-container" class="summer-post-container intro-effect-fadeout" role="main">
+            <header class="summer-post-header">
+                <div class="bg-img">
+                    {{#if image}}
+                        <img src="{{image}}" alt="{{title}}">
+                    {{/if}}
+                </div>
+                {{! Each post has the blog logo at the top, with a link back to the home page }}
+                <div class="summer-post-menu-header">
+                    {{! see partials/logo.hbs and partials/menu.hbs}}
+                    {{> logo}}
+                    {{> menu}}
+                </div>
+                <div class="summer-post-title bg-check">
+                    <h1>{{title}}</h1>
+                    <p>{{#if author.name}}Por <strong>{{author}}</strong> &#8212;{{/if}} {{> tags_loop}} <strong><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time></strong></p>
+                </div>
+            </header>
+            <button class="trigger bg-check" data-info="Click here"><span>Trigger</span></button>
+        </main>
+    {{/has}}
+
+    {{! post cover sliced effect just add sliced tag }}
+    {{#has tag="sliced"}}
+        {{^has tag="simple, push"}}
+        <main id="summer-post-container" class="summer-post-container intro-effect-sliced" role="main">
+            <header class="summer-post-header">
+                <div class="bg-img">
+                    {{#if image}}
+                        <img src="{{image}}" alt="{{title}}">
+                    {{/if}}
+                </div>
+                {{! Each post has the blog logo at the top, with a link back to the home page }}
+                <div class="summer-post-menu-header">
+                    {{! see partials/logo.hbs and partials/menu.hbs}}
+                    {{> logo}}
+                    {{> menu}}
+                </div>
+                <div class="summer-post-title bg-check">
+                    <h1>{{title}}</h1>
+                    <p>{{#if author.name}}por <strong>{{author}}</strong> &#8212;{{/if}} {{> tags_loop}} <strong><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time></strong></p>
+                </div>
+                <div class="bg-img">
+                    {{#if image}}
+                        <img src="{{image}}" alt="{{title}}">
+                    {{/if}}
+                </div>
+            </header>
+            <button class="trigger bg-check" data-info="Click here"><span>Trigger</span></button>
+        </main>
+        {{/has}}
+    {{/has}}
+
+    {{! post cover push effect just add push tag }}
+    {{#has tag="push"}}
+        {{^has tag="simple, sliced"}}
+        <main id="summer-post-container" class="summer-post-container intro-effect-push" role="main">
+            <header class="summer-post-header">
+                <div class="bg-img">
+                    {{#if image}}
+                        <img src="{{image}}" alt="{{title}}">
+                    {{/if}}
+                </div>
+                {{! Each post has the blog logo at the top, with a link back to the home page }}
+                <div class="summer-post-menu-header">
+                    {{! see partials/logo.hbs and partials/menu.hbs}}
+                    {{> logo}}
+                    {{> menu}}
+                </div>
+                <div class="summer-post-title bg-check">
+                    <h1>{{title}}</h1>
+                </div>
+            </header>
+            <button class="trigger bg-check" data-info="Click here"><span>Trigger</span></button>
+            {{! for this effect we need to duplicate header }}
+
+            <div class="summer-post-menu-header">
+                {{! see partials/logo.hbs and partials/menu.hbs}}
+                {{> logo}}
+                {{> menu}}
+            </div>
+            <div class="summer-post-title">
+                <h1>{{title}}</h1>
+                <p>{{#if author.name}}Por <strong>{{author}}</strong> &#8212;{{/if}} {{> tags_loop}} <strong><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time></strong></p>
+            </div>
+        </main>
+        {{/has}}
+    {{/has}}
+
+    {{! post without cover just add simple tag }}
+    {{#has tag="simple"}}
+    <main id="summer-post-container-simple" class="summer-post-container-simple" role="main">
+        <header class="summer-post-header-simple">
+            <div class="summer-post-menu-header-simple">
+                {{! see partials/logo.hbs and partials/menu.hbs}}
+                {{> logo}}
+                {{> menu}}
+            </div>
+            <div class="summer-post-title-simple row">
+                <div class="small-12 columns">
+                    <div class="summer-post-meta-simple">
+                        <h1>{{title}}</h1>
+                        <p class="meta">{{#if author.name}}por <strong>{{author}}</strong> &#8212;{{/if}} <span class="simple-view-tag-list">{{> tags_loop}}</span> <strong><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time></strong></p>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </main>
+    {{/has}}
+    <article class="summer-post-content {{post_class}}">
+        <div>
+            <div class="content">
+                <div class="text">{{content}}</div>
+                <div class="sidebar">
+                    <div class="sticky-sidebar js-post-sticky-sidebar">
+                        {{> "reading-time-indicator"}}
+                        {{> "post-share-icons"}}
+                        {{> "recent-posts"}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <div class="cf"></div>
+    {{> "post-share-icons"}}
+    <div class="cf"></div>
+    {{#if author}}
+        <div class="summer-author-info" {{#if author.cover}}style="background-image: url({{author.cover}})"{{/if}}>
+            <div class="bg-opacity"></div>
+            <div class="row">
+                <section class="summer-post-author small-12 columns">
+                    {{#if author.image}}
+                        <img src="{{author.image}}" class="summer-post-author-avatar" alt="{{author.name}}">
+                    {{/if}}
+                    {{#if author.name}}
+                        <span class="author-label">Autora</span>
+                        <h1>{{#author}}<a href="{{url}}" class="author-link-name">{{name}}</a>{{/author}}</h1>
+                    {{/if}}
+                    {{#if author.website}}
+                        <p><a href="{{author.website}}" class="author-website">{{author.website}}</a></p>
+                    {{/if}}
+                    {{#if author.bio}}
+                        <p>{{author.bio}}</p>
+                    {{/if}}
+                </section>
+            </div>
+        </div>
+    {{/if}}
+    <div class="cf"></div>
+    {{> disqus}}
+    <div class="cf"></div>
+    {{> footer}}
+{{/post}}
+

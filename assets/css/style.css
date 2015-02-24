@@ -1,0 +1,640 @@
+/* tools */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  height: auto;
+  min-height: 100%;
+  line-height: 1; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif; }
+
+blockquote {
+  padding-bottom: 0.625rem; }
+  blockquote p {
+    margin: 0 !important;
+    padding: 0 !important; }
+
+.summer-parallax-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat; }
+
+header, main, footer {
+  position: relative;
+  z-index: 1; }
+
+.animated-post {
+  background: transparent; }
+
+.summer-blog-menu {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 0.9375rem;
+  float: right;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2.625rem;
+  height: 5rem; }
+  .summer-blog-menu .summer-mobile-menu a {
+    display: inline-block;
+    outline: none;
+    color: #000;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem; }
+    .summer-blog-menu .summer-mobile-menu a:hover {
+      color: #000; }
+  .summer-blog-menu ul {
+    background: #000;
+    position: absolute;
+    width: 100%;
+    -webkit-transform: translate3d(0, -110%, 0);
+    -ms-transform: translate3d(0, -110%, 0);
+    -moz-transform: translate3d(0, -110%, 0);
+    -o-transform: translate3d(0, -110%, 0);
+    transform: translate3d(0, -110%, 0);
+    top: 0;
+    left: 0;
+    list-style-type: none;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    -webkit-transition: -webkit-transform .3s;
+    transition: transform .3s;
+    padding-top: 0;
+    padding-bottom: 3.125rem; }
+    .summer-blog-menu ul li {
+      display: block;
+      margin: 0;
+      width: 100%;
+      font-size: 2.25rem;
+      text-align: center;
+      padding: 0.3125rem; }
+      .summer-blog-menu ul li a {
+        color: #ffffff;
+        display: block;
+        width: 100%;
+        height: 100%;
+        outline: none; }
+      .summer-blog-menu ul li.summer-mobile-close-btn {
+        padding-right: 1.25rem; }
+        .summer-blog-menu ul li.summer-mobile-close-btn a {
+          color: #ffffff; }
+    .summer-blog-menu ul.opened {
+      -webkit-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+  @media only screen and (min-width: 40.063em) {
+    .summer-blog-menu {
+      padding-top: 1.75rem;
+      padding-bottom: 1.5625rem;
+      font-size: 1rem; }
+      .summer-blog-menu ul {
+        background: transparent;
+        position: relative;
+        width: auto;
+        list-style-type: none;
+        margin: 0;
+        width: auto;
+        overflow: auto;
+        -webkit-transform: none;
+        -ms-transform: none;
+        -moz-transform: none;
+        -o-transform: none;
+        transform: none;
+        visibility: visible;
+        padding-top: 0;
+        padding-bottom: 0; }
+        .summer-blog-menu ul li {
+          display: inline-block;
+          margin-left: 1.25rem;
+          width: auto;
+          font-size: 1rem;
+          text-align: left;
+          padding: 0; }
+          .summer-blog-menu ul li a {
+            color: #000;
+            display: inline-block;
+            border-bottom: 0.1875rem solid transparent;
+            width: auto;
+            height: auto; }
+            .summer-blog-menu ul li a:hover {
+              border-bottom: 0.1875rem solid #e51843; }
+          .summer-blog-menu ul li .search-menu-btn:hover {
+            border: 0; } }
+
+.summer-site-head .summer-site-head-menu {
+  background: #ffffff; }
+  .summer-site-head .summer-site-head-menu .summer-blog-logo {
+    display: inline-block;
+    max-height: 5rem; }
+    .summer-site-head .summer-site-head-menu .summer-blog-logo img {
+      max-height: 5rem; }
+  .summer-site-head .summer-site-head-menu .title {
+    display: inline-block;
+    padding: 0;
+    padding-left: 1.25rem;
+    height: 5rem;
+    line-height: 5rem;
+    vertical-align: middle;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.625rem;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: -0.0625rem; }
+    .summer-site-head .summer-site-head-menu .title a {
+      color: #000; }
+      .summer-site-head .summer-site-head-menu .title a:hover {
+        color: #000; }
+.summer-site-head .summer-site-head-content {
+  width: 100%;
+  text-align: center;
+  background-color: #000;
+  background-size: cover; }
+  .summer-site-head .summer-site-head-content.with-bg-cover {
+    background-color: rgba(0, 0, 0, 0.3); }
+  .summer-site-head .summer-site-head-content .summer-site-head-title-bg {
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    background: #e51843;
+    line-height: 1.1; }
+  .summer-site-head .summer-site-head-content h1, .summer-site-head .summer-site-head-content h2 {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    text-transform: uppercase; }
+  .summer-site-head .summer-site-head-content h1 {
+    padding-top: 4.375rem;
+    font-size: 0.875rem;
+    margin-bottom: 0.9375rem; }
+    .summer-site-head .summer-site-head-content h1 a {
+      color: #ffffff; }
+      .summer-site-head .summer-site-head-content h1 a:hover, .summer-site-head .summer-site-head-content h1 a:focus, .summer-site-head .summer-site-head-content h1 a:active {
+        color: #ffffff; }
+    .summer-site-head .summer-site-head-content h1 .fa {
+      margin-left: 0.3125rem; }
+  .summer-site-head .summer-site-head-content h2 {
+    font-size: 2.5rem;
+    padding-bottom: 5rem;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    font-weight: 700;
+    line-height: 1.3; }
+  @media only screen and (min-width: 40.063em) {
+    .summer-site-head .summer-site-head-content h1 {
+      padding-top: 7.5rem;
+      font-size: 1rem; }
+    .summer-site-head .summer-site-head-content h2 {
+      font-size: 3.75rem;
+      padding-bottom: 7.5rem;
+      font-weight: 700; } }
+  @media only screen and (min-width: 70em) {
+    .summer-site-head .summer-site-head-content h1 {
+      padding-top: 9.375rem;
+      font-size: 1rem; }
+    .summer-site-head .summer-site-head-content h2 {
+      font-size: 4.375rem;
+      padding-bottom: 9.375rem;
+      font-weight: 700; } }
+  @media only screen and (min-width: 90em) {
+    .summer-site-head .summer-site-head-content h1 {
+      padding-top: 10.3125rem; }
+    .summer-site-head .summer-site-head-content h2 {
+      font-size: 5rem;
+      padding-bottom: 10.3125rem; } }
+  @media only screen and (min-width: 100em) {
+    .summer-site-head .summer-site-head-content h1 {
+      padding-top: 12.5rem; }
+    .summer-site-head .summer-site-head-content h2 {
+      font-size: 6.25rem;
+      padding-bottom: 12.5rem; } }
+
+.post-loop-animations .animated-post {
+  visibility: hidden; }
+
+.summer-content {
+  background: #ffffff; }
+  .summer-content .summer-index-post {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 0.0625rem solid #d9d9d9; }
+    .summer-content .summer-index-post:first-of-type {
+      padding-top: 5rem; }
+    .summer-content .summer-index-post .datetime {
+      margin-bottom: 2.5rem; }
+    @media only screen and (min-width: 40.063em) {
+      .summer-content .summer-index-post {
+        padding-top: 4.375rem;
+        padding-bottom: 4.375rem; }
+        .summer-content .summer-index-post:first-of-type {
+          padding-top: 7.5rem; }
+        .summer-content .summer-index-post .datetime {
+          margin-bottom: 0; } }
+    .summer-content .summer-index-post .summer-post-meta {
+      display: block;
+      text-align: center; }
+      .summer-content .summer-index-post .summer-post-meta .day {
+        display: block;
+        font-size: 3.25rem;
+        font-weight: 800;
+        color: #e51843;
+        font-family: "Montserrat", sans-serif; }
+      .summer-content .summer-index-post .summer-post-meta .month-year {
+        display: block;
+        font-size: 1rem;
+        color: #000;
+        font-size: 0.875rem;
+        font-family: "Montserrat", sans-serif;
+        text-transform: uppercase; }
+    .summer-content .summer-index-post .summer-post-header .summer-post-title {
+      color: #000;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 2rem;
+      margin: 0;
+      padding: 0;
+      line-height: 1.1; }
+      .summer-content .summer-index-post .summer-post-header .summer-post-title a {
+        color: #000; }
+    @media only screen and (min-width: 40.063em) {
+      .summer-content .summer-index-post .summer-post-header .summer-post-title {
+        text-align: left;
+        font-size: 2.625rem;
+        margin-bottom: 0.9375rem; } }
+    .summer-content .summer-index-post .summer-post-excerpt {
+      color: #000;
+      font-size: 1.25rem;
+      margin-top: 0.625rem;
+      text-align: center; }
+      .summer-content .summer-index-post .summer-post-excerpt p {
+        margin: 0;
+        font-size: 1.25rem; }
+    @media only screen and (min-width: 40.063em) {
+      .summer-content .summer-index-post .summer-post-excerpt {
+        text-align: left; } }
+    .summer-content .summer-index-post .summer-index-post-author {
+      padding-top: 0.625rem;
+      padding-bottom: 0.625rem;
+      text-align: center;
+      color: #666666;
+      font-size: 0.875rem;
+      line-height: 2.125rem; }
+      .summer-content .summer-index-post .summer-index-post-author a {
+        color: #666666;
+        -webkit-transition: color .3s;
+        transition: color .3s; }
+        .summer-content .summer-index-post .summer-index-post-author a:hover, .summer-content .summer-index-post .summer-index-post-author a:active, .summer-content .summer-index-post .summer-index-post-author a:focus {
+          color: #e51843; }
+      .summer-content .summer-index-post .summer-index-post-author .summer-index-post-author-thumb {
+        width: 2.1875rem;
+        height: 2.1875rem;
+        border-radius: 100%;
+        margin-right: 0.5rem; }
+      @media only screen and (min-width: 40.063em) {
+        .summer-content .summer-index-post .summer-index-post-author {
+          text-align: left; }
+          .summer-content .summer-index-post .summer-index-post-author .summer-index-post-author-thumb {
+            float: left; } }
+    .summer-content .summer-index-post .summer-post-read-more {
+      display: block;
+      text-align: center;
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1.5625rem;
+      font-size: 0.8125rem;
+      color: #ffffff;
+      background-color: #000;
+      font-weight: 600;
+      padding: 0.625rem 2.5rem;
+      text-transform: uppercase;
+      -webkit-transition: background-color .3s;
+      transition: background-color .3s;
+      width: 60%;
+      border-radius: 0.125rem; }
+      .summer-content .summer-index-post .summer-post-read-more:hover {
+        background-color: #e51843; }
+    @media only screen and (min-width: 40.063em) {
+      .summer-content .summer-index-post .summer-post-read-more {
+        width: auto;
+        float: left;
+        margin-left: 0;
+        margin-right: 0.3125rem; } }
+
+.summer-author-head-content {
+  width: 100%;
+  text-align: center;
+  background-color: #000;
+  background-size: cover; }
+  .summer-author-head-content .summer-site-head-title-bg {
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    background: #e51843;
+    line-height: 1.1; }
+  .summer-author-head-content h1, .summer-author-head-content h2 {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    text-transform: uppercase; }
+  .summer-author-head-content h1 {
+    padding-top: 4.375rem;
+    font-size: 0.875rem;
+    margin-bottom: 0.9375rem; }
+    .summer-author-head-content h1 a {
+      color: #ffffff; }
+      .summer-author-head-content h1 a:hover, .summer-author-head-content h1 a:focus, .summer-author-head-content h1 a:active {
+        color: #ffffff; }
+    .summer-author-head-content h1 .fa {
+      margin-left: 0.3125rem; }
+  .summer-author-head-content h2 {
+    font-size: 2.5rem;
+    padding-bottom: 5rem;
+    font-weight: 700;
+    line-height: 1.3; }
+  @media only screen and (min-width: 40.063em) {
+    .summer-author-head-content h1 {
+      font-size: 1rem; }
+    .summer-author-head-content h2 {
+      font-size: 3.75rem; } }
+  .summer-author-head-content .summer-author-page-avatar {
+    text-align: center;
+    padding-bottom: 1.875rem; }
+    .summer-author-head-content .summer-author-page-avatar img {
+      width: 9.375rem;
+      height: 9.375rem;
+      border-radius: 100%; }
+    @media only screen and (min-width: 40.063em) {
+      .summer-author-head-content .summer-author-page-avatar img {
+        width: 11.25rem;
+        height: 11.25rem; } }
+
+nav.pagination {
+  padding-top: 5.625rem;
+  padding-bottom: 5.625rem;
+  text-align: center; }
+  nav.pagination .newer-posts,
+  nav.pagination .older-posts,
+  nav.pagination .page-number {
+    font-size: 0.875rem;
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.1875rem;
+    color: #000;
+    border: 0.125rem solid #000; }
+  nav.pagination .newer-posts:hover,
+  nav.pagination .older-posts:hover {
+    border: 0.125rem solid #e51843;
+    color: #e51843; }
+  nav.pagination .newer-posts.faded,
+  nav.pagination .older-posts.faded {
+    color: gray;
+    border: 0.125rem solid gray; }
+    nav.pagination .newer-posts.faded a,
+    nav.pagination .older-posts.faded a {
+      color: gray; }
+  nav.pagination .newer-posts .fa {
+    margin-right: 0.625rem; }
+  nav.pagination .older-posts .fa {
+    margin-left: 0.625rem; }
+
+.summer-site-footer {
+  background: #000; }
+  .summer-site-footer.with-bg-cover {
+    background-color: rgba(0, 0, 0, 0.7); }
+  .summer-site-footer .social-icons,
+  .summer-site-footer .copyright {
+    width: 100%;
+    padding: 0;
+    text-align: center; }
+  .summer-site-footer .copyright {
+    color: #ffffff;
+    float: none;
+    text-align: center;
+    font-size: 1.2rem;
+    padding-top: 3.75rem;
+    padding-bottom: 1.25rem; }
+    .summer-site-footer .copyright a {
+      color: #ffffff; }
+  .summer-site-footer .social-icons {
+    text-align: center;
+    float: none;
+    padding-bottom: 3.75rem; }
+    .summer-site-footer .social-icons a {
+      color: #000; }
+  @media only screen and (min-width: 70em) {
+    .summer-site-footer .social-icons,
+    .summer-site-footer .copyright {
+      width: 49%;
+      padding: 5rem; }
+    .summer-site-footer .copyright {
+      text-align: left;
+      float: left; }
+    .summer-site-footer .social-icons {
+      text-align: right;
+      float: right; } }
+
+.fadeInDown {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  visibility: visible !important; }
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0); } }
+.tag-template .summer-index-post:first-of-type {
+  padding-top: 3.125rem; }
+  @media only screen and (min-width: 40.063em) {
+    .tag-template .summer-index-post:first-of-type {
+      padding-top: 4.6875rem; } }
+
+.summer-tags-container {
+  background-color: #f2f2f2;
+  position: relative;
+  z-index: 1; }
+  .summer-tags-container.with-bg-cover {
+    background-color: rgba(255, 255, 255, 0.8); }
+  .summer-tags-container .summer-tags-header {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.125rem;
+    color: #000;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+    text-align: center; }
+    .summer-tags-container .summer-tags-header .tag-name {
+      color: #e51843;
+      text-transform: none; }
+    @media only screen and (min-width: 40.063em) {
+      .summer-tags-container .summer-tags-header {
+        font-size: 1.5625rem; } }
+
+.tags-loop .tag-link {
+  position: relative;
+  display: inline-block;
+  margin-right: 0.625rem; }
+  .tags-loop .tag-link:after {
+    content: ',';
+    display: inline-block;
+    position: absolute;
+    right: -0.25rem;
+    bottom: 0; }
+  .tags-loop .tag-link:last-child:after {
+    display: none; }
+
+.big-search {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.95);
+  -webkit-user-select: none;
+  user-select: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+  z-index: 99999;
+  overflow-y: auto; }
+  .big-search .big-search-close-btn {
+    font-size: 3.75rem;
+    text-align: center;
+    position: absolute;
+    right: 2.1875rem;
+    top: 2.1875rem;
+    overflow: hidden;
+    border: none;
+    color: #ffffff;
+    outline: none;
+    z-index: 100;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none; }
+  .big-search.open {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s; }
+  .big-search .big-search-container {
+    margin-top: 8%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem; }
+    .big-search .big-search-container .row {
+      max-width: 45.625rem; }
+    .big-search .big-search-container .big-search-form-input {
+      color: #ffffff;
+      height: 5rem;
+      font-size: 2.25rem;
+      padding: 1.25rem 0;
+      font-weight: 900;
+      background-color: transparent;
+      box-shadow: none;
+      border: 0;
+      border-bottom: 0.1875rem solid #ffffff;
+      font-family: "Montserrat", sans-serif; }
+      .big-search .big-search-container .big-search-form-input:focus {
+        box-shadow: none;
+        background-color: transparent; }
+      .big-search .big-search-container .big-search-form-input::-webkit-input-placeholder {
+        color: #ffffff; }
+      .big-search .big-search-container .big-search-form-input:-moz-placeholder {
+        color: #ffffff;
+        opacity: 1; }
+      .big-search .big-search-container .big-search-form-input::-moz-placeholder {
+        color: #ffffff;
+        opacity: 1; }
+      .big-search .big-search-container .big-search-form-input:-ms-input-placeholder {
+        color: #ffffff; }
+    .big-search .big-search-container .columns .big-search-results {
+      color: #ffffff;
+      font-family: "Montserrat", sans-serif; }
+      .big-search .big-search-container .columns .big-search-results > p {
+        font-weight: 600;
+        font-size: 2.25rem !important;
+        padding-top: 0.9375rem;
+        padding-bottom: 0.9375rem;
+        margin: 0.625rem !important; }
+      .big-search .big-search-container .columns .big-search-results a {
+        color: #ffffff; }
+        .big-search .big-search-container .columns .big-search-results a p, .big-search .big-search-container .columns .big-search-results a h1, .big-search .big-search-container .columns .big-search-results a h2, .big-search .big-search-container .columns .big-search-results a h3, .big-search .big-search-container .columns .big-search-results a h4, .big-search .big-search-container .columns .big-search-results a h5, .big-search .big-search-container .columns .big-search-results a h6 {
+          font-size: 1.625rem;
+          color: #ffffff;
+          font-weight: 400;
+          text-transform: none;
+          -webkit-transition: color .3s;
+          transition: color .3s;
+          margin: 0.625rem !important; }
+        .big-search .big-search-container .columns .big-search-results a:hover, .big-search .big-search-container .columns .big-search-results a:active, .big-search .big-search-container .columns .big-search-results a:focus {
+          text-decoration: none; }
+        .big-search .big-search-container .columns .big-search-results a:hover p, .big-search .big-search-container .columns .big-search-results a:hover h1, .big-search .big-search-container .columns .big-search-results a:hover h2, .big-search .big-search-container .columns .big-search-results a:hover h3, .big-search .big-search-container .columns .big-search-results a:hover h4, .big-search .big-search-container .columns .big-search-results a:hover h5, .big-search .big-search-container .columns .big-search-results a:hover h6 {
+          color: #999999; }
+
+html.html-search-height {
+  height: auto !important; }
+
+/* back to to button */
+.summer-back-to-top {
+  display: none;
+  background: #e6e6e6;
+  color: #000;
+  position: fixed;
+  bottom: 0;
+  right: 0.9375rem;
+  width: 3.125rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  border-radius: 0.1875rem 0.1875rem 0 0;
+  z-index: 9999;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0); }
+  .summer-back-to-top.hidden {
+    bottom: -2.5rem; }
+  .summer-back-to-top:hover {
+    background: #cccccc; }
+  @media only screen and (min-width: 40.063em) {
+    .summer-back-to-top {
+      display: block; } }

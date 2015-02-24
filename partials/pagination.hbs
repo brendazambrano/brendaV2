@@ -1,0 +1,13 @@
+<nav class="pagination" role="navigation">
+    {{#if prev}}
+        <a class="newer-posts" href="{{page_url prev}}"><i class="fa fa-chevron-left"></i> más nuevo</a>
+    {{else}}
+        <span class="newer-posts faded"><i class="fa fa-chevron-left"></i> más nuevo</span>
+    {{/if}}
+    <span class="page-number">Pagina {{page}} de {{pages}}</span>
+    {{#if next}}
+        <a class="older-posts" href="{{page_url next}}">anterior  <i class="fa fa-chevron-right"></i></a>
+    {{else}}
+        <span class="older-posts faded">anterior  <i class="fa fa-chevron-right"></i></span>
+    {{/if}}
+</nav>

@@ -1,0 +1,36 @@
+{{#foreach posts}}
+    <article class="animated-post summer-index-post {{post_class}} row">
+        <div class="small-12 medium-3 large-2 columns datetime">
+            <span class="summer-post-meta">
+                <time datetime="{{date format='YYYY-MM-DD'}}">
+                    <span class="day">
+                        {{date format="DD"}}
+                    </span>
+                    <span class="month-year">
+                        {{date format="MMM YYYY"}}
+                    </span>
+                </time>
+            </span>
+        </div>
+        <div class="small-12 medium-9 large-10 columns">
+            <header class="summer-post-header">
+                <h3 class="summer-post-title">
+                    <a href="{{url}}">
+                        {{title}}
+                    </a>
+                </h3>
+            </header>
+            <section class="summer-post-excerpt">
+                <p>{{excerpt words="30"}}&hellip;</p>
+            </section>
+            <div class="summer-index-post-author">
+                {{#if author.image}}<img class="summer-index-post-author-thumb" src="{{author.image}}" alt="Author image">{{/if}}
+                {{author}} {{> tags_loop}} {{! tags loop here see partials/tags_loop.hbs}}
+            </div>
+            <a href="{{url}}" class="summer-post-read-more">Leer más</a>
+        </div>
+    </article>
+{{/foreach}}
+
+{{! Previous/next page links - displayed on every page }}
+{{pagination}}

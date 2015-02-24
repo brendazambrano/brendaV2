@@ -1,0 +1,740 @@
+/* tools */
+.cf:before, .post-template .summer-post-content:before, .post-template .summer-post-content .content:before, .post-template .summer-post-content .content .sidebar:before,
+.cf:after,
+.post-template .summer-post-content:after,
+.post-template .summer-post-content .content:after,
+.post-template .summer-post-content .content .sidebar:after {
+  content: " ";
+  display: table; }
+
+.cf:after, .post-template .summer-post-content:after, .post-template .summer-post-content .content:after, .post-template .summer-post-content .content .sidebar:after {
+  clear: both; }
+
+html, body, .summer-post-container, .summer-post-header {
+  height: 100%; }
+
+.summer-post-header-title {
+  display: inline-block;
+  padding: 0;
+  padding-left: 1.25rem;
+  height: 5rem;
+  line-height: 5rem;
+  vertical-align: middle;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: -0.0625rem; }
+  .summer-post-header-title a {
+    color: #ffffff; }
+    .summer-post-header-title a:hover {
+      color: #ffffff; }
+
+.post-template {
+  /* Header */
+  /* based on http://tympanus.net/Development/ArticleIntroEffects/index3.html */
+  /* Trigger Button */
+  /* Conent */ }
+  .post-template .summer-site-footer {
+    background-color: #000; }
+  .post-template .summer-blog-menu .summer-mobile-menu a {
+    color: #ffffff; }
+    .post-template .summer-blog-menu .summer-mobile-menu a:hover {
+      color: #ffffff; }
+  @media only screen and (min-width: 40.063em) {
+    .post-template .summer-blog-menu ul li a {
+      color: #ffffff; }
+      .post-template .summer-blog-menu ul li a:hover {
+        border-bottom: 0.1875rem solid #ffffff; }
+    .post-template .summer-blog-menu ul li .search-menu-btn:hover {
+      border: 0; } }
+  .post-template .summer-post-header {
+    position: relative;
+    margin: 0 auto;
+    width: 100%; }
+  .post-template .summer-post-menu-header {
+    width: 100%;
+    height: 5rem;
+    background-color: #000;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999; }
+    .post-template .summer-post-menu-header .summer-blog-logo {
+      display: inline-block;
+      max-height: 5rem; }
+      .post-template .summer-post-menu-header .summer-blog-logo img {
+        max-height: 5rem; }
+    .post-template .summer-post-menu-header .title {
+      display: inline-block;
+      padding: 0;
+      padding-left: 1.25rem;
+      height: 5rem;
+      line-height: 5rem;
+      vertical-align: middle;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.625rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: -0.0625rem; }
+      .post-template .summer-post-menu-header .title a {
+        color: #ffffff; }
+        .post-template .summer-post-menu-header .title a:hover {
+          color: #ffffff; }
+  .post-template .bg-img {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+    .post-template .bg-img img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      min-width: 100%;
+      min-height: 100%;
+      max-width: none; }
+  .post-template .summer-post-title {
+    z-index: 1000;
+    margin: 0 auto;
+    padding: 0 1.25em;
+    text-align: center;
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-65%);
+    transform: translateX(-50%) translateY(-65%);
+    -webkit-font-smoothing: antialiased; }
+    .post-template .summer-post-title a {
+      color: #000; }
+      .post-template .summer-post-title a:hover {
+        color: #e51843; }
+    .post-template .summer-post-title h1 {
+      color: #000;
+      font-weight: 800;
+      font-size: 2.5rem;
+      margin: 0 auto;
+      line-height: 1.1;
+      text-transform: uppercase;
+      text-rendering: optimizeLegibility; }
+      @media only screen and (min-width: 40.063em) {
+        .post-template .summer-post-title h1 {
+          font-size: 3.125rem; } }
+      @media only screen and (min-width: 70em) {
+        .post-template .summer-post-title h1 {
+          font-size: 4.375rem; } }
+      @media only screen and (min-width: 90em) {
+        .post-template .summer-post-title h1 {
+          font-size: 5.3125rem; } }
+    .post-template .summer-post-title.background--light h1 {
+      color: #000; }
+    .post-template .summer-post-title.background--dark h1 {
+      color: #ffffff; }
+  .post-template button.trigger {
+    position: fixed;
+    bottom: 2.5rem;
+    left: 50%;
+    z-index: 5000;
+    display: block;
+    margin-left: -0.5em;
+    padding: 0;
+    width: 1em;
+    height: 1em;
+    border: none;
+    background: transparent;
+    color: transparent;
+    font-size: 2em;
+    cursor: pointer;
+    animation-name: swing;
+    -webkit-animation-name: swing;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite; }
+    .post-template button.trigger.background--light::before, .post-template button.trigger.background--light span::before {
+      color: #000; }
+    .post-template button.trigger.background--dark::before, .post-template button.trigger.background--dark span::before {
+      color: #ffffff; }
+  .post-template .summer-post-container:not(.notrans) button.trigger {
+    -webkit-transition: opacity 0.3s 0.5s;
+    transition: opacity 0.3s 0.5s; }
+  .post-template .summer-post-container.modify:not(.notrans) button.trigger {
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s; }
+  .post-template button.trigger:focus {
+    outline: none; }
+  .post-template button.trigger span {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 2.5rem;
+    height: 100%; }
+  .post-template button.trigger span::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #000;
+    content: "\f078";
+    text-transform: none;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-family: 'FontAwesome';
+    line-height: 1;
+    speak: none;
+    font-size: 2.25rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .post-template .summer-post-content {
+    margin: 0 auto;
+    padding: 0; }
+    .post-template .summer-post-content > div:not(.summer-post-title) > div:not(.row, .paddings) {
+      max-width: 43.75rem;
+      margin-left: auto;
+      margin-right: auto; }
+      .post-template .summer-post-content > div:not(.summer-post-title) > div:not(.row, .paddings) > ul {
+        margin: 0;
+        padding: 0; }
+    .post-template .summer-post-content > div:not(.summer-post-title) a {
+      color: #e51843; }
+    .post-template .summer-post-content > div:not(.summer-post-title) ul:not(.pricing-table) {
+      padding-left: 1.25rem;
+      font-size: 1.125rem; }
+    .post-template .summer-post-content > div:not(.summer-post-title) ol:not(.pricing-table) {
+      padding-left: 1.5625rem;
+      font-size: 1.125rem; }
+    .post-template .summer-post-content > div:not(.summer-post-title) h1, .post-template .summer-post-content > div:not(.summer-post-title) h2, .post-template .summer-post-content > div:not(.summer-post-title) h3, .post-template .summer-post-content > div:not(.summer-post-title) h4, .post-template .summer-post-content > div:not(.summer-post-title) h5, .post-template .summer-post-content > div:not(.summer-post-title) h6 {
+      font-weight: bold; }
+    .post-template .summer-post-content > div:not(.summer-post-title) h1, .post-template .summer-post-content > div:not(.summer-post-title) h2, .post-template .summer-post-content > div:not(.summer-post-title) h3, .post-template .summer-post-content > div:not(.summer-post-title) h4, .post-template .summer-post-content > div:not(.summer-post-title) h5, .post-template .summer-post-content > div:not(.summer-post-title) h6, .post-template .summer-post-content > div:not(.summer-post-title) ul, .post-template .summer-post-content > div:not(.summer-post-title) ol, .post-template .summer-post-content > div:not(.summer-post-title) blockquote, .post-template .summer-post-content > div:not(.summer-post-title) pre, .post-template .summer-post-content > div:not(.summer-post-title) hr {
+      max-width: 43.75rem;
+      margin-left: auto;
+      margin-right: auto;
+      -webkit-font-smoothing: antialiased; }
+    .post-template .summer-post-content > div:not(.summer-post-title) p {
+      margin: 0 auto;
+      padding-bottom: 2em;
+      max-width: 43.75rem;
+      font-size: 1.125rem; }
+      .post-template .summer-post-content > div:not(.summer-post-title) p:nth-of-type(1) {
+        font-size: 1.25rem;
+        font-weight: 300; }
+      @media only screen and (min-width: 40.063em) {
+        .post-template .summer-post-content > div:not(.summer-post-title) p {
+          font-size: 1.25rem; }
+          .post-template .summer-post-content > div:not(.summer-post-title) p:nth-of-type(1) {
+            font-size: 1.3125rem; } }
+      .post-template .summer-post-content > div:not(.summer-post-title) p.with-image {
+        text-align: center;
+        padding-top: 3.125rem;
+        padding-bottom: 3.125rem;
+        max-width: 56.25rem; }
+    .post-template .summer-post-content .content {
+      padding-left: 1.875rem;
+      padding-right: 1.875rem;
+      width: 100%;
+      max-width: 80rem;
+      margin: 0 auto; }
+      .post-template .summer-post-content .content .text {
+        width: 100%;
+        max-width: 50rem;
+        margin: 0 auto; }
+        @media only screen and (min-width: 80em) {
+          .post-template .summer-post-content .content .text {
+            margin: 0;
+            float: left;
+            margin-left: 10.625rem; } }
+      .post-template .summer-post-content .content .sidebar {
+        position: relative;
+        width: 14.375rem;
+        display: none;
+        float: left;
+        padding-left: 1.875rem;
+        z-index: 9999; }
+        .post-template .summer-post-content .content .sidebar .sticky-sidebar {
+          margin-top: 0;
+          -webkit-transition: margin-top .9s;
+          transition: margin-top .9s; }
+          .post-template .summer-post-content .content .sidebar .sticky-sidebar .summer-post-share {
+            padding-top: 1.875rem;
+            padding-bottom: 1.875rem;
+            border-top: 0;
+            border-bottom: 0.0625rem solid #e51843; }
+          .post-template .summer-post-content .content .sidebar .sticky-sidebar.sticky {
+            width: 12.5rem;
+            position: fixed;
+            top: 0;
+            margin-top: 2.5rem;
+            z-index: 9999;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0); }
+        @media only screen and (min-width: 80em) {
+          .post-template .summer-post-content .content .sidebar {
+            display: block; } }
+  .post-template .summer-post-content.tag-simple > div:not(.summer-post-title) {
+    margin: 0 auto 0; }
+  @media screen and (max-width: 47em) {
+    .post-template .summer-post-title, .post-template .summer-post-content {
+      font-size: 70%; } }
+  @media screen and (max-width: 27em) {
+    .post-template .summer-post-title, .post-template .summer-post-content {
+      font-size: 50%; }
+    .post-template button.trigger::before {
+      display: none; } }
+
+@-webkit-keyframes swing {
+  0% {
+    -webkit-transform: translateY(0%); }
+  50% {
+    -webkit-transform: translateY(50%); }
+  100% {
+    -webkit-transform: translateY(0%); } }
+@keyframes swing {
+  0% {
+    transform: translateY(0%); }
+  50% {
+    transform: translateY(50%); }
+  100% {
+    transform: translateY(0%); } }
+.summer-post-share {
+  font-size: 1.875rem;
+  padding: 0;
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+  border-top: 0.0625rem solid #f2f2f2;
+  color: #e51843; }
+  .summer-post-share a {
+    display: inline-block;
+    margin: 0 0.9375rem;
+    color: #e51843; }
+  @media only screen and (min-width: 40.063em) {
+    .summer-post-share {
+      padding-top: 5rem;
+      padding-bottom: 5rem; } }
+
+.summer-author-info {
+  padding: 0;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-color: #d9d9d9;
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem; }
+  .summer-author-info .bg-opacity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.85); }
+  @media only screen and (min-width: 40.063em) {
+    .summer-author-info {
+      padding-top: 5rem;
+      padding-bottom: 5rem; } }
+  @media only screen and (min-width: 70em) {
+    .summer-author-info {
+      padding-top: 6.875rem;
+      padding-bottom: 6.875rem; } }
+  @media only screen and (min-width: 90em) {
+    .summer-author-info {
+      padding-top: 7.5rem;
+      padding-bottom: 7.5rem; } }
+  .summer-author-info .summer-post-author {
+    position: relative;
+    z-index: 3;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+    text-align: center; }
+    .summer-author-info .summer-post-author .author-label {
+      display: block;
+      font-size: 1rem;
+      color: gray;
+      font-style: italic; }
+    .summer-author-info .summer-post-author .author-link-name {
+      color: #000;
+      -webkit-transition: color .3s;
+      transition: color .3s; }
+      .summer-author-info .summer-post-author .author-link-name:active, .summer-author-info .summer-post-author .author-link-name:hover, .summer-author-info .summer-post-author .author-link-name:focus {
+        color: #e51843; }
+    .summer-author-info .summer-post-author .author-website {
+      font-size: 1rem; }
+    .summer-author-info .summer-post-author h1 {
+      margin: 0;
+      padding: 0;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      text-transform: uppercase; }
+    .summer-author-info .summer-post-author > p {
+      font-size: 1.125rem; }
+      .summer-author-info .summer-post-author > p a {
+        color: #e51843; }
+    .summer-author-info .summer-post-author .summer-post-author-avatar {
+      width: 12.5rem;
+      height: 12.5rem;
+      border-radius: 50%;
+      float: none;
+      margin-right: 0;
+      margin-bottom: 1.25rem; }
+      @media only screen and (min-width: 40.063em) {
+        .summer-author-info .summer-post-author .summer-post-author-avatar {
+          margin-right: 3.125rem;
+          margin-bottom: 0;
+          float: left; } }
+    @media only screen and (min-width: 40.063em) {
+      .summer-author-info .summer-post-author {
+        text-align: left; } }
+
+.summer-page-menu-header,
+.summer-post-menu-header-simple {
+  width: 100%;
+  height: 5rem;
+  background-color: #000;
+  color: #ffffff;
+  position: relative;
+  z-index: 9999; }
+  .summer-page-menu-header .title,
+  .summer-post-menu-header-simple .title {
+    display: inline-block;
+    padding: 0;
+    padding-left: 1.25rem;
+    height: 5rem;
+    line-height: 5rem;
+    vertical-align: middle;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.625rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -0.0625rem; }
+    .summer-page-menu-header .title a,
+    .summer-post-menu-header-simple .title a {
+      color: #ffffff; }
+      .summer-page-menu-header .title a:hover,
+      .summer-post-menu-header-simple .title a:hover {
+        color: #ffffff; }
+  .summer-page-menu-header .summer-blog-logo,
+  .summer-post-menu-header-simple .summer-blog-logo {
+    display: inline-block;
+    max-height: 5rem; }
+    .summer-page-menu-header .summer-blog-logo img,
+    .summer-post-menu-header-simple .summer-blog-logo img {
+      max-height: 5rem; }
+
+.summer-page-title,
+.summer-post-title-simple {
+  margin: 0 auto;
+  width: 80%; }
+  .summer-page-title a,
+  .summer-post-title-simple a {
+    color: #000; }
+    .summer-page-title a:hover,
+    .summer-post-title-simple a:hover {
+      color: #e51843; }
+  .summer-page-title h1,
+  .summer-post-title-simple h1 {
+    color: #000;
+    font-weight: 800;
+    font-size: 3.125rem;
+    padding: 0;
+    padding-top: 5rem;
+    padding-bottom: 4.375rem;
+    margin: 0 auto;
+    line-height: 1.1;
+    text-align: center;
+    text-transform: uppercase; }
+    @media only screen and (min-width: 40.063em) {
+      .summer-page-title h1,
+      .summer-post-title-simple h1 {
+        font-size: 4.375rem;
+        padding-top: 5.625rem;
+        padding-bottom: 5.625rem; } }
+    @media only screen and (min-width: 70em) {
+      .summer-page-title h1,
+      .summer-post-title-simple h1 {
+        padding-top: 6.875rem;
+        padding-bottom: 6.875rem; } }
+    @media only screen and (min-width: 90em) {
+      .summer-page-title h1,
+      .summer-post-title-simple h1 {
+        font-size: 5.3125rem;
+        padding-top: 8.125rem;
+        padding-bottom: 8.125rem; } }
+  .summer-page-title .summer-post-meta-simple,
+  .summer-post-title-simple .summer-post-meta-simple {
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 2.5rem; }
+    .summer-page-title .summer-post-meta-simple h1,
+    .summer-post-title-simple .summer-post-meta-simple h1 {
+      padding: 0; }
+    .summer-page-title .summer-post-meta-simple p.meta,
+    .summer-post-title-simple .summer-post-meta-simple p.meta {
+      padding-top: 0.625rem; }
+    @media only screen and (min-width: 40.063em) {
+      .summer-page-title .summer-post-meta-simple,
+      .summer-post-title-simple .summer-post-meta-simple {
+        padding-top: 6.25rem;
+        padding-bottom: 3.75rem; } }
+    @media only screen and (min-width: 70em) {
+      .summer-page-title .summer-post-meta-simple,
+      .summer-post-title-simple .summer-post-meta-simple {
+        padding-top: 8.75rem;
+        padding-bottom: 5.625rem; } }
+    @media only screen and (min-width: 90em) {
+      .summer-page-title .summer-post-meta-simple,
+      .summer-post-title-simple .summer-post-meta-simple {
+        padding-top: 10rem;
+        padding-bottom: 6.25rem; } }
+
+/* Page conent */
+.summer-page-content {
+  margin: 0 auto;
+  padding: 0 0 5rem; }
+  .summer-page-content > div:not(.summer-page-title) {
+    margin: 0 auto;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem; }
+    .summer-page-content > div:not(.summer-page-title) a {
+      color: #e51843; }
+    .summer-page-content > div:not(.summer-page-title) ul {
+      padding-left: 1.25rem;
+      font-size: 1.125rem; }
+    .summer-page-content > div:not(.summer-page-title) ol {
+      padding-left: 1.5625rem;
+      font-size: 1.125rem; }
+    .summer-page-content > div:not(.summer-page-title) h1, .summer-page-content > div:not(.summer-page-title) h2, .summer-page-content > div:not(.summer-page-title) h3, .summer-page-content > div:not(.summer-page-title) h4, .summer-page-content > div:not(.summer-page-title) h5, .summer-page-content > div:not(.summer-page-title) h6 {
+      font-weight: bold; }
+    .summer-page-content > div:not(.summer-page-title) h1, .summer-page-content > div:not(.summer-page-title) h2, .summer-page-content > div:not(.summer-page-title) h3, .summer-page-content > div:not(.summer-page-title) h4, .summer-page-content > div:not(.summer-page-title) h5, .summer-page-content > div:not(.summer-page-title) h6, .summer-page-content > div:not(.summer-page-title) ul, .summer-page-content > div:not(.summer-page-title) ol, .summer-page-content > div:not(.summer-page-title) blockquote, .summer-page-content > div:not(.summer-page-title) pre, .summer-page-content > div:not(.summer-page-title) hr {
+      max-width: 43.75rem;
+      margin-left: auto;
+      margin-right: auto; }
+    .summer-page-content > div:not(.summer-page-title) p {
+      margin: 0 auto 2em auto;
+      max-width: 43.75rem;
+      font-size: 1.125rem; }
+      .summer-page-content > div:not(.summer-page-title) p:first-child {
+        font-size: 1.25rem;
+        font-weight: 300; }
+        @media only screen and (min-width: 40.063em) {
+          .summer-page-content > div:not(.summer-page-title) p:first-child {
+            font-size: 1.375rem; } }
+      .summer-page-content > div:not(.summer-page-title) p.with-image {
+        text-align: center;
+        padding-top: 3.125rem;
+        padding-bottom: 3.125rem;
+        max-width: 56.25rem; }
+
+@media screen and (max-width: 40.063em) {
+  .summer-page-title {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem; } }
+@media screen and (max-width: 47em) {
+  .summer-page-title, .summer-page-content {
+    font-size: 70%; } }
+@media screen and (max-width: 27em) {
+  .summer-page-title, .summer-page-content {
+    font-size: 50%; } }
+.post-template .row:not(.summer-post-title-simple),
+.page-template .row:not(.summer-post-title-simple) {
+  max-width: 45.625rem; }
+  .post-template .row:not(.summer-post-title-simple) p,
+  .page-template .row:not(.summer-post-title-simple) p {
+    margin: 0 auto 2em auto !important;
+    max-width: 43.75rem !important;
+    font-size: 1.125rem !important; }
+  @media only screen and (max-width: 40.063em) {
+    .post-template .row:not(.summer-post-title-simple) .columns,
+    .page-template .row:not(.summer-post-title-simple) .columns {
+      padding-left: 0;
+      padding-right: 0; } }
+  @media only screen and (min-width: 43.75rem) {
+    .post-template .row:not(.summer-post-title-simple),
+    .page-template .row:not(.summer-post-title-simple) {
+      margin-left: auto;
+      margin-right: auto; } }
+.post-template .summer-post-title-simple .row,
+.post-template .summer-disqus .row,
+.post-template .social-icons .row,
+.page-template .summer-post-title-simple .row,
+.page-template .summer-disqus .row,
+.page-template .social-icons .row {
+  margin-left: auto;
+  margin-right: auto; }
+.post-template .summer-author-info .row,
+.page-template .summer-author-info .row {
+  margin-left: auto;
+  margin-right: auto; }
+
+::selection {
+  background: #e51843;
+  color: #fff; }
+
+::-moz-selection {
+  background: #e51843;
+  color: #fff; }
+
+pre {
+  word-wrap: break-word;
+  margin-bottom: 1.5625rem; }
+
+iframe {
+  border: 0; }
+
+.flex-video {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 56.25rem; }
+
+.pricing-table a.button {
+  color: #fff !important; }
+
+.orbit-container ul {
+  margin: 0 !important;
+  padding: 0 !important; }
+
+.clearing-assembled {
+  width: 100%;
+  max-width: none !important; }
+  .clearing-assembled .clearing-close {
+    color: #fff !important; }
+
+.summer-disqus {
+  position: relative;
+  z-index: 3;
+  padding: 0;
+  padding-top: 3.75rem;
+  padding-bottom: 5.625rem;
+  padding-left: 1.875rem;
+  padding-right: 1.875rem; }
+  .summer-disqus .summer-comments-header {
+    font-weight: 700;
+    text-transform: uppercase; }
+  @media only screen and (min-width: 40.063em) {
+    .summer-disqus {
+      padding-top: 5.3125rem;
+      padding-bottom: 9.375rem; } }
+
+.post-recent-list {
+  padding-left: 0.3125rem;
+  margin-top: 1.875rem;
+  display: none; }
+  .post-recent-list .post-recent-list-label {
+    font-size: 1.125rem;
+    color: #000;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 0.9375rem; }
+  .post-recent-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 !important; }
+    .post-recent-list ul li {
+      line-height: 1.2;
+      padding: 0.3125rem 0 0.5rem; }
+      .post-recent-list ul li .title {
+        font-weight: 400;
+        font-size: 0.875rem;
+        color: #1a1a1a !important;
+        display: block;
+        -webkit-transition: color .3s;
+        transition: color .3s; }
+        .post-recent-list ul li .title:hover, .post-recent-list ul li .title:focus, .post-recent-list ul li .title:active {
+          color: gray !important;
+          text-decoration: none; }
+      .post-recent-list ul li .date {
+        margin-top: 0.3125rem;
+        color: #b3b3b3;
+        font-weight: 400;
+        display: block;
+        font-size: 0.75rem; }
+  @media only screen and (min-width: 80em) {
+    .post-recent-list {
+      display: block; } }
+
+.post-reading-time {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.02);
+  height: 5rem;
+  overflow-y: hidden;
+  border-top: 0.1875rem solid #e51843;
+  display: none; }
+  .post-reading-time .percent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    opacity: .5;
+    padding: 0.625rem;
+    font-size: 0.75rem; }
+  .post-reading-time .read-estimation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    color: #000;
+    padding: 0.9375rem;
+    height: 5rem;
+    vertical-align: middle;
+    display: table; }
+    .post-reading-time .read-estimation .read-estimation-content {
+      display: table-cell;
+      background-color: transparent;
+      vertical-align: middle;
+      margin-bottom: 0; }
+      .post-reading-time .read-estimation .read-estimation-content .title {
+        font-weight: 400;
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.1;
+        font-size: 0.875rem; }
+      .post-reading-time .read-estimation .read-estimation-content .estimated-time {
+        font-weight: 300;
+        opacity: .6;
+        font-size: 0.8125rem; }
+  .post-reading-time .read-progress-indicator {
+    width: 100%;
+    height: 5rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.03); }
+    .post-reading-time .read-progress-indicator::-webkit-progress-bar {
+      background-color: transparent; }
+    .post-reading-time .read-progress-indicator.single::-ms-fill {
+      border: 0; }
+    .post-reading-time .read-progress-indicator.single::-webkit-progress-value {
+      background-color: rgba(0, 0, 0, 0.03); }
+    .post-reading-time .read-progress-indicator.single::-moz-progress-bar {
+      background-color: rgba(0, 0, 0, 0.03); }
+  .post-reading-time .progress-container {
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5rem;
+    display: block;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    overflow-x: hidden; }
+    .post-reading-time .progress-container .progress-bar {
+      background-color: #f4f4f4;
+      width: 100%;
+      height: 100%;
+      display: block; }
+  @media only screen and (min-width: 80em) {
+    .post-reading-time {
+      display: block; } }

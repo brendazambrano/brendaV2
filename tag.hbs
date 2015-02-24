@@ -1,0 +1,42 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template}}
+
+{{! parallax cover background }}
+{{#if tag.image}}
+    <div class="summer-parallax-background" style="background-image: url({{tag.image}})"></div>
+{{else}}
+    {{#if @blog.cover}}
+        <div class="summer-parallax-background" style="background-image: url({{@blog.cover}})"></div>
+    {{/if}}
+{{/if}}
+
+{{! The big featured header on the homepage, with the site logo and description }}
+<header class="summer-site-head">
+    <div class="summer-site-head-menu">
+        {{! see partials/logo.hbs and partials/menu.hbs}}
+        {{> logo}}
+        {{> menu}}
+    </div>
+    {{> big_header}}
+</header>
+
+<div class="summer-tags-container {{#if @blog.cover}}with-bg-cover{{/if}}">
+    <div class="row">
+        <div class="small-12 columns">
+            <h1 class="summer-tags-header">
+                All posts tagged in: <span class="tag-name">{{tag.name}}</span>
+            </h1>
+        </div>
+    </div>
+</div>
+
+{{! The main content area on the tags page }}
+<main class="summer-content" role="main">
+
+    {{! Each post will be output using this markup see partials/post_loop.hbs}}
+    {{> post_loop}}
+
+</main>
+{{> footer}}

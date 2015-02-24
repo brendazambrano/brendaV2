@@ -1,0 +1,41 @@
+{{!< default}}
+
+{{!-- The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template. --}}
+
+{{! parallax cover background }}
+{{#if @blog.cover}}
+    <div class="summer-parallax-background" style="background-image: url({{@blog.cover}})"></div>
+{{/if}}
+
+{{! The big featured header on the homepage, with the site logo and description }}
+{{#author}}
+    <header class="summer-site-head summer-author-page">
+        <div class="summer-site-head-menu">
+            {{! see partials/logo.hbs and partials/menu.hbs }}
+            {{> logo}}
+            {{> menu}}
+        </div>
+        <div class="summer-author-head-content" {{#if cover}}style="background-image: url({{cover}})"{{/if}}>
+            <h1 class="summer-blog-title">
+                <div class="summer-author-page-avatar">
+                    <img src="{{image}}" alt="">
+                </div>
+                <span class="summer-site-head-title-bg">
+                    {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}} <a href="{{url}}rss/"><i class="fa fa-rss"></i></a>
+                </span>
+            </h1>
+            <h2 class="summer-blog-description">{{name}}</h2>
+        </div>
+    </header>
+{{/author}}
+
+{{! The main content area on the author page }}
+<main class="summer-content" role="main">
+
+    {{! Each post will be output using this markup see partials/post_loop.hbs }}
+    {{> post_loop}}
+
+</main>
+
+{{> footer}}
